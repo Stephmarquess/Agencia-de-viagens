@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="/HTML/CSS/index.css">
+  <title>GoTour - Home </title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <img id="logo" src="/HTML/IMAGENS/ICONES/logo.png" /> <span id="logotxt"> <b>G</b>o<b>T</b>our</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/HTML/index.html"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/HTML/promocoes.html">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/HTML/destinos.html">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/HTML/contato.html">Contato</a>
+            </li>
+
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><img src="/HTML/IMAGENS/ICONES/lupa.png"
+                alt="icone de lupa para pesquisa" height="20px"></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section id="inicio">
+
+      <h2>Onde você quer se aventurar?</h2>
+      <div class="passagem">
+        <input type="text" name="local" id="local" placeholder="Destino"><br>
+        <form>
+          <div class="form-align">
+            <label> Data de Ida </label>
+            <input type="date" name="dataIda" id="dataIda">
+          </div>
+
+          <div class="form-align">
+            <label> Data de Volta </label>
+            <input type="date" name="dataVolta" id="dataVolta"><br>
+          </div>
+        </form>
+        <button type="submit">Buscar</button>
+      </div>
+
+    </section>
+
+
+    <section id="destinos">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12" id="nacional">
+          <h3 class="titulo-secao">Destinos Nacionais</h3>
+          <a href="/HTML/destinos.html"><button type="button" class="btn btn-warning">Conferir</button></a>
+
+        </div>
+        <div class="col-lg-6 col-sm-12" id="internacional">
+          <h3 class="titulo-secao">Destinos Internacionais</h3>
+          <a href="/HTML/destinos.html"><button type="button" class="btn btn-warning">Conferir</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="row">
+        <div class="col-lg-12 col-sm-12">
+          <img src="/HTML/IMAGENS/INDEX/e-mail.png" alt="">
+          <h3>Newsletter</h3>
+          <p> Receba as novidades e promoções de viagem em primeira mão!</p>
+          <form action="form-newsletter">
+            <input type="email" name="email" id="email-newsletter" placeholder="Digite o seu e-mail"><br>
+            <button type="submit">Registrar</button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="painel-parceiros">
+      <div class="row" id="parceiros">
+        <h3 class="titulo-secao">Nossos Parceiros</h3>
+        <div class="col-lg-12 col-sm-12" id="img-parc">
+          <img src="/HTML/IMAGENS/LOGO/airbnb.png" alt="Logo do parceiro Air BnB">
+          <img src="/HTML/IMAGENS/LOGO/flyEmirates.png" alt="Logo do parceiro Air BnB">
+          <img src="/HTML/IMAGENS/LOGO/localiza.png" alt="Logo do parceiro Localiza (Aluguel de Carros)">
+          <img src="/HTML/IMAGENS/LOGO/allianzseguros.png" alt="Logo do parceiro Allianz Seguros de Viagem">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="row row-cols-1 row-cols-md-3 g-3" id="rodape">
+    <div class="col">
+      <img id="logo" src="/HTML/IMAGENS/ICONES/logo.png" /><span id="logotxt"> <b>G</b>o<b>T</b>our</span>
+    </div>
+    <div id="social" class="col">
+      <img src="/HTML/IMAGENS/ICONES/instagram.png">
+      <img src="/HTML/IMAGENS/ICONES/facebook_174848.png">
+
+    </div>
+
+    <div id="local" class="col">
+      <img src="/HTML/IMAGENS/ICONES/pinodelocalizacao.png" alt="ícone de localização da empresa">
+      <p>Praça Roberto Gomes Pedrosa, s/n - Jardim Leonor - São Paulo - SP</p>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

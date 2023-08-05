@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: auto;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #8ecae6;
+  display: flex;
+  justify-content: space-around;
+  color: black;
+}
+
+.form-align {
+  width: 30%;
+}
+
+#inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/HTML/IMAGENS/INDEX/inicio-bg.jpg);
+  height: 300px;
+  background-size: 60%;
+}
+
+#inicio h2 {
+  background-color: #FB8500;
+  border: 0.5px solid;
+  border-radius: 6px;
+  box-shadow: 5px 10px #023047;
+  margin-bottom: 20px;
+  width: 60%;
+
+}
+
+#inicio form {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: white;
+  padding-top: 20px;
+  width: 100%;
+}
+
+input {
+  border: 0.5px solid;
+  border-radius: 10px;
+}
+
+.form {
+  background-color: white;
+  height: 100px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#rodape {
+  background-color: #8ecae6;
+  color: black;
+  margin-top: 50px;
+}
+
+#logotxt {
+  font-size: 30px;
+}
+
+#logo {
+  height: 70px;
+}
+
+#social img {
+  height: 30px;
+}
+
+h1 {
+  margin-top: 20px;
+  align-content: center;
+  background-color: #023047;
+  color: white;
+  box-shadow: 5px 10px #fb8500;
+}
+
+button {
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #FB8500;
+  color: black;
+}
+
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#internacional,
+#nacional,
+#promocoes,
+#newsletter,
+#parceiros {
+  margin-top: 10px;
+
+}
+
+#internacional {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(/HTML/IMAGENS/INDEX/internacionaldestinos.jpg);
+  background-position-y: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  border-radius: 5px;
+}
+
+#internacional button {
+  width: 30%;
+  align-self: center;
+}
+
+.titulo-secao {
+  background-color: #023047;
+  color: white;
+  width: 75%;
+  align-self: center;
+  box-shadow: 5px 5px#fb8500;
+
+}
+
+#nacional {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(/HTML/IMAGENS/INDEX/nacionaldestinos.jpg);
+  background-position-y: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  border-radius: 5px;
+
+}
+
+#nacional button {
+  width: 30%;
+  align-self: center;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#parceiros {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#parceiros img {
+  height: 100px;
+  width: 20%;
+  gap: 20px
+}
+
+#newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+#newsletter img {
+  background-size: 50%;
+  height: 100px;
+  align-self: center;
+}
+
+#newsletter form {
+  margin-top: 10px;
+  width: 100%;
+
+}
+
+#id-parc {
+  width: 50%;
+}
+
+#promocoes img {
+  height: 200px;
+  width: 10%;
+  border-radius: 50px;
+}
+
+#promocoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 468px) {
+
+  #inicio form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-align {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+}
