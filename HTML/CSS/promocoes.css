@@ -113,5 +113,20 @@ button {
 }
 
 #rodape {
-  align-items: center;
+  background-color: #8ecae6;
+  color: black;
+  margin-top: 50px;
 }
+
+#logotxt {
+  font-size: 30px;
+}
+
+#logo {
+  height: 70px;
+}
+
+#social img {
+  height: 30px;
+}
+

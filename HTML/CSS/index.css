@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/HTML/IMAGENS/INDEX/inicio-bg.jpg);
+  background-image: url("../IMAGENS/inicio-bg.jpg");
   height: 300px;
   background-size: 60%;
 }
@@ -119,7 +119,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(/HTML/IMAGENS/INDEX/internacionaldestinos.jpg);
+  background-image: url(../IMAGENS/internacionaldestinos.jpg);
   background-position-y: 30%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -145,7 +145,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(/HTML/IMAGENS/INDEX/nacionaldestinos.jpg);
+  background-image: url(../IMAGENS/nacionaldestinos.jpg);
   background-position-y: 30%;
   background-size: cover;
   background-repeat: no-repeat;
