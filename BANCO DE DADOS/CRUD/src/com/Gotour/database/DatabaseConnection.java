@@ -14,14 +14,18 @@ public class DatabaseConnection {
 	public static Connection createConnection () {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			System.out.println("Diver encontrado!");
+			System.out.println("");
+			System.out.println("Driver encontrado!");
+			System.out.println("");
 		} catch (ClassNotFoundException e) {
 			System.out.println("Driver não encontrado! Mensagem:" + e.getMessage());
 		}
 		
 		try {
 			Connection connection = DriverManager.getConnection(url, user, password);
+			System.out.println("");
 			System.out.println("Driver conectado com sucesso!");
+			System.out.println("");
 			
 			return connection; 
 			

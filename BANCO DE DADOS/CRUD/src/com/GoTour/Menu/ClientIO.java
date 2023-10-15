@@ -14,77 +14,84 @@ public class ClientIO {
 
 	public static int SubMenuCli(Scanner scanner) {
 		int input = Integer.MAX_VALUE;
-		
-		
-		do {
-			System.out.println("MENU CLIENTE\n" + "1 - cadastrar\n" + "2 - Consultar Dados \n" + "3 - Atualizar\n" + "4 - Deletar"
-					+ "\n0 - Sair");
 
+		do {
+			System.out.println(" \n::::::::: ÁREA CLIENTE ::::::::: \n ");
+			System.out.println(" 1 - Cadastrar Cliente \n" + " 2 - Consultar Cliente \n" + " 3 - Atualizar Cliente \n"
+					+ " 4 - Deletar Cliente" + "\n 0 - Voltar \n");
+			System.out.println(":::::::::::::::::::::::::::::::: \n ");
 			input = scanner.nextInt();
 			switch (input) {
 			case 1:
 				scanner.nextLine();
 				Client client = new Client();
+				System.out.println("");
+				System.out.println("::::::::::::::::::::::::::::::::");
+				System.out.println("Cliente: CADASTRAR CLIENTE \n");
 				System.out.println("Nome Completo: ");
 				client.setNomeCliente(scanner.nextLine());
 				System.out.println("CPF: ");
 				client.setCpf(scanner.next().trim());
 				scanner.nextLine();
-				System.out.println("Endereco: ");
+				System.out.println("Endereco (Rua, nº , bairro , Cidade , UF, País): ");
 				client.setEndereco(scanner.nextLine());
-				System.out.println("Telefone: ");
+				System.out.println("Telefone (com DDD):  ");
 				client.setTelefone(scanner.next().trim());
-				System.out.println("E-mailL: ");
+				scanner.nextLine();
+				System.out.println("E-mail: ");
 				client.setEmail(scanner.nextLine());
-				
-				
+
 				clientDAO.createClient(client);
-				
+
 				break;
 			case 2:
 				clientDAO.readAllClients();
 				break;
 			case 3:
 				Client updateClient = new Client();
+				System.out.println("");
+				System.out.println("::::::::::::::::::::::::::::::::");
+				System.out.println("Cliente: ATUALIZAR CLIENTE \n");
+
 				System.out.println("Digite o ID do cliente a ser atualizado: ");
-				updateClient.setIdCliente(scanner.nextInt());				
+				updateClient.setIdCliente(scanner.nextInt());
 				scanner.nextLine();
 				System.out.println("Nome Completo: ");
 				updateClient.setNomeCliente(scanner.nextLine());
-				
+
 				System.out.println("CPF: ");
 				updateClient.setCpf(scanner.nextLine().trim());
-	
-				System.out.println("Endereco: " + "(Rua, nº , bairro, Cidade, UF. País)");
+
+				System.out.println("Endereco: " + "(Rua, nº , Bairro, Cidade, UF, País)");
 				updateClient.setEndereco(scanner.nextLine());
-	
-				System.out.println("Telefone: ");
+
+				System.out.println("Telefone (com DDD): ");
 				updateClient.setTelefone(scanner.next().trim());
-				
+
+				scanner.nextLine();
 				System.out.println("E-mail: ");
 				updateClient.setEmail(scanner.nextLine());
-
 
 				clientDAO.updateClient(updateClient);
 
 				break;
 			case 4:
-				System.out
-						.println("Digite o ID do Cliente a ser " + "DELETADO");
+				System.out.println("");
+				System.out.println("::::::::::::::::::::::::::::::::");
+				System.out.println("Cliente: DELETAR CLIENTE \n");
+				System.out.println("Digite o ID do Cliente a ser " + "(DELETADO)");
 				int idCliente = scanner.nextInt();
 				clientDAO.deleteClient(idCliente);
-				
+
 				break;
 			default:
-				System.out.println("Digite uma opcao valida");
-
+				System.out.println("\n Digite uma opção válida! \n");
+				
 			}
 
 		} while (input != 0);
-		
+
 		return input;
 	}
 
-	
-	
 }
