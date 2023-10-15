@@ -86,5 +86,11 @@ public class Client {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Client [idCliente=" + idCliente + ", nomeCliente=" + nomeCliente + ", cpf=" + cpf
+				+ ", endereco=" + endereco + ", telefone=" + telefone + ", email=" + email + "]";
+	}
+	
 	
 }

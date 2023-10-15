@@ -23,15 +23,10 @@ public class BookingDAO {
 
 	public void createBooking(Booking booking) {
 		sql = "INSERT INTO Reserva (descricaoReserva, valor, dataVolta, dataIda, tipoPagamento, idCliente, idDestino) "
-				+ "VALUES (?, ?, DATE ? , DAT	E ? , ?, ?, ?)";
+				+ "VALUES (?, ?, DATE ? , DATE ? , ?, ?, ?)";
 
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 
-//			Timestamp date = Timestamp.valueOf(booking.getDataIda().toString());
-
-//			Timestamp sqlAtendimento = Timestamp.valueOf(atendimento.getHorarioAtendimento());
-//			Timestamp sqlAgendamento = Timestamp.valueOf(atendimento.getHorarioAgendamento());
-//			stmt.setTimestamp(1, sqlAtendimento);
 
 			stmt.setString(1, booking.getDescricaoReserva());
 			stmt.setDouble(2, booking.getValor());
@@ -57,6 +52,7 @@ public class BookingDAO {
 
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 			ResultSet r = stmt.executeQuery();
+			
 			while (r.next()) {
 				Booking booking = new Booking();
 
@@ -81,9 +77,9 @@ public class BookingDAO {
 				destination.setNomeDestino(r.getString("nomeDestino"));
 				destination.setDescricaoDestino(r.getString("descricaoDestino"));
 
-				System.out.println("ID Reserva:" + booking.getIdReserva() + "\n Descrição: "
-						+ booking.getDescricaoReserva() + " \n Data de Ida: " + booking.getDataIda()
-						+ " \n Data de VOLTA: " + booking.getDataVolta() + "\n Tipo de pagamento: "
+				System.out.println(" ID Reserva: " + booking.getIdReserva() + "\n Descrição: "
+						+ booking.getDescricaoReserva() + " \n Data Ida: " + booking.getDataIda()
+						+ " \n Data de Volta: " + booking.getDataVolta() + "\n Tipo de pagamento: "
 						+ booking.getTipoPagamento() + " \n Id do Cliente: " + client.getIdCliente() + " \n ID Destino:"
 						+ destination.getIdDestino());
 
@@ -113,7 +109,8 @@ public class BookingDAO {
 
 			stmt.executeUpdate();
 
-			System.out.println("Reserva atualizada com sucesso! \n" + "Descrição da reserva: "
+			System.out.println("Reserva atualizada com sucesso! \n");
+			System.out.println(" Descrição da reserva: "
 					+ booking.getDescricaoReserva() + "\n Valor: " + booking.getValor() + "\n Data de IDA: "
 					+ booking.getDataIda() + "\n Data de VOLTA: " + booking.getDataVolta() + "\n Tipo de pagamento: "
 					+ booking.getTipoPagamento() + "\n Id Cliente: " + booking.getClient().getIdCliente()

@@ -20,7 +20,8 @@ public class ClientDAO {
 	// CREATE
 
 	public void createClient(Client client) {
-		sql = "INSERT INTO Cliente (nomeCliente, cpf, endereco, telefone, email) VALUES (?,?,?,?,?)";
+		sql = "INSERT INTO Cliente (nomeCliente, cpf, endereco, telefone, email) "
+				+ "VALUES (?, ? , ? , ?, ?)";
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 
 			stmt.setString(1, client.getNomeCliente());
@@ -75,6 +76,7 @@ public class ClientDAO {
 
 	public void updateClient(Client client) {
 		sql = "UPDATE Cliente SET nomeCliente = ?, cpf = ?, endereco = ?, telefone = ?, email = ? WHERE idCliente = ?";
+		
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 			stmt.setInt(1, client.getIdCliente());
 			stmt.setString(2, client.getNomeCliente());
@@ -84,9 +86,14 @@ public class ClientDAO {
 			stmt.setString(6, client.getEmail());
 
 			stmt.executeUpdate();
+			
+			System.out.println("Cliente atualizado com sucesso! \n");
+			System.out.println(" Nome do Cliente: "
+					+ client.getNomeCliente() + "\n CPF: " + client.getCpf() + "\n Endereço: "
+					+ client.getEndereco() + "\n Telefone: " + client.getTelefone()  + "\n E-mail: " + client.getEmail());
 
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			System.out.println("Não foi possível atualizar o cliente especificado: \n " + e.getMessage());
 		}
 	}
 

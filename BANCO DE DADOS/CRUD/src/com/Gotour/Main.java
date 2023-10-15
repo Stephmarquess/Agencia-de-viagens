@@ -28,15 +28,12 @@ public class Main {
 				case 3:
 					BookingIO.SubMenuBooking(scanner);
 					break;
-				case 4:
-	//				AtendimentoIO.SubMenuAtendimento(scanner);
-					break;
 				default:
-					System.out.println("Digite uma opcao valida!");
+					System.out.println("Digite uma opcão válida!");
 
 				}
 
-			} while (option != 5);
+			} while (option != 9);
 			scanner.close();
 		
 	}

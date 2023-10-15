@@ -52,16 +52,12 @@ public class DestinationDAO {
 					destination.setDescricaoDestino(r.getString("descricaoDestino"));
 							
 					System.out.println("--------------------------------------------");
-					System.out.println("Consultar Dados: DESTINOS");
-					System.out.println("--------------------------------------------");
+					
 					System.out.printf("\n Nome do Destino: %s\n Descrição: %s\n ID: " +
 					destination.getIdDestino(), destination.getNomeDestino(), destination.getDescricaoDestino());
 					System.out.println(" ");
 				}
 				
-				if (!r.next()) {
-					System.out.println("Não há dados registrados no banco!");
-				}
 				
 			} catch (SQLException e) {
 				System.out.println("Não foi possível carregar as informações do Destino");
