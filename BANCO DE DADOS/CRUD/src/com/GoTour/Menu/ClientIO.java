@@ -60,15 +60,15 @@ public class ClientIO {
 				updateClient.setIdCliente(scanner.nextInt());
 				scanner.nextLine();
 				System.out.println("Nome completo");
-				updateClient.setNomeCliente(scanner.nextLine());				
+				updateClient.setNomeCliente(scanner.nextLine().trim());				
 				System.out.println("CPF: ");
-				updateClient.setCpf(scanner.nextLine());				
+				updateClient.setCpf(scanner.nextLine().trim());				
 				System.out.println("Endereço (Rua, nº , bairro, cidade, UF , país): ");				
-				updateClient.setEndereco(scanner.nextLine());				
+				updateClient.setEndereco(scanner.nextLine().trim());				
 				System.out.println("Telefone: ");
-				updateClient.setTelefone(scanner.nextLine());
+				updateClient.setTelefone(scanner.nextLine().trim());
 				System.out.println("E-mail: ");
-				updateClient.setEmail(scanner.nextLine());
+				updateClient.setEmail(scanner.nextLine().toString());
 	
 				clientDAO.updateClient(updateClient);
 				

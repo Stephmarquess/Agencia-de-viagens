@@ -16,13 +16,14 @@ public class Client {
 	}
 
 
-	public Client(String nomeCliente, String telefone, String email, String cpf, String endereco) {
+	public Client(String nomeCliente, String cpf, String endereco, String telefone, String email) {
 		super();
 		this.nomeCliente = nomeCliente;
-		this.telefone = telefone;
-		this.email = email;
 		this.cpf = cpf;
 		this.endereco = endereco;
+		this.telefone = telefone;
+		this.email = email;		
+		
 	}
 
 

@@ -75,15 +75,16 @@ public class ClientDAO {
 	// UPDATE
 
 	public void updateClient(Client client) {
-		sql = "UPDATE Cliente SET nomeCliente = ?, cpf = ?, endereco = ?, telefone = ?, email = ? WHERE idCliente = ?";
+		sql = "UPDATE Cliente SET nomeCliente = ?, cpf =?, endereco =?, telefone =?, email =? WHERE idCliente =?";
 		
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-			stmt.setInt(1, client.getIdCliente());
-			stmt.setString(2, client.getNomeCliente());
-			stmt.setString(3, client.getCpf());
-			stmt.setString(4, client.getEndereco());
-			stmt.setString(5, client.getTelefone());
-			stmt.setString(6, client.getEmail());
+
+			stmt.setString(1, client.getNomeCliente());
+			stmt.setString(2, client.getCpf());
+			stmt.setString(3, client.getEndereco());
+			stmt.setString(4, client.getTelefone());
+			stmt.setString(5, client.getEmail().toString());
+			stmt.setInt(6, client.getIdCliente());
 
 			stmt.executeUpdate();
 			
