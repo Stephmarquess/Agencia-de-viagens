@@ -77,12 +77,13 @@ public class BookingDAO {
 				destination.setNomeDestino(r.getString("nomeDestino"));
 				destination.setDescricaoDestino(r.getString("descricaoDestino"));
 
+				
 				System.out.println(" ID Reserva: " + booking.getIdReserva() + "\n Descrição: "
 						+ booking.getDescricaoReserva() + " \n Data Ida: " + booking.getDataIda()
 						+ " \n Data de Volta: " + booking.getDataVolta() + "\n Tipo de pagamento: "
-						+ booking.getTipoPagamento() + " \n Id do Cliente: " + client.getIdCliente() + " \n ID Destino:"
+						+ booking.getTipoPagamento() + " \n Id do Cliente: " + client.getIdCliente() + " \n ID Destino: "
 						+ destination.getIdDestino());
-
+				System.out.println("----------------------------- \n");
 			}
 
 		} catch (SQLException e) {
@@ -98,21 +99,22 @@ public class BookingDAO {
 		sql = "UPDATE Reserva SET descricaoReserva = ?, valor = ?, dataIda = ?, dataVolta = ?, tipoPagamento = ?, idCliente = ?, idDestino = ? WHERE idReserva = ?";
 		try (PreparedStatement stmt = connection.prepareStatement(sql)) {
 
-			stmt.setInt(1, booking.getIdReserva());
-			stmt.setString(2, booking.getDescricaoReserva());
-			stmt.setDouble(3, booking.getValor());
-			stmt.setString(4, booking.getDataIda());
-			stmt.setString(5, booking.getDataVolta());
-			stmt.setString(6, booking.getTipoPagamento());
-			stmt.setInt(7, booking.getClient().getIdCliente());
-			stmt.setInt(8, booking.getDestination().getIdDestino());
+			
+			stmt.setString(1, booking.getDescricaoReserva());
+			stmt.setDouble(2, booking.getValor());
+			stmt.setString(3, booking.getDataIda());
+			stmt.setString(4, booking.getDataVolta());
+			stmt.setString(5, booking.getTipoPagamento());
+			stmt.setInt(6, booking.getClient().getIdCliente());
+			stmt.setInt(7, booking.getDestination().getIdDestino());
+			stmt.setInt(8, booking.getIdReserva());
 
 			stmt.executeUpdate();
 
 			System.out.println("Reserva atualizada com sucesso! \n");
 			System.out.println(" Descrição da reserva: "
-					+ booking.getDescricaoReserva() + "\n Valor: " + booking.getValor() + "\n Data de IDA: "
-					+ booking.getDataIda() + "\n Data de VOLTA: " + booking.getDataVolta() + "\n Tipo de pagamento: "
+					+ booking.getDescricaoReserva() + "\n Valor: " + booking.getValor() + "\n Data de ida: "
+					+ booking.getDataIda() + "\n Data de ida: " + booking.getDataVolta() + "\n Tipo de pagamento: "
 					+ booking.getTipoPagamento() + "\n Id Cliente: " + booking.getClient().getIdCliente()
 					+ "\n Id do Destino: " + booking.getDestination().getIdDestino());
 

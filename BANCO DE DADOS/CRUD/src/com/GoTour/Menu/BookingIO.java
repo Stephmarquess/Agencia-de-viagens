@@ -41,9 +41,9 @@ public class BookingIO {
 				System.out.println("Valor: ");
 				booking.setValor(scanner.nextDouble());
 				scanner.nextLine();
-				System.out.println("Data de IDA (DD/MM/YYY)");
+				System.out.println("Data de ida (DD/MM/YYY)");
 				booking.setDataIda(scanner.nextLine());
-				System.out.println("Data de VOLTA (DD/MM/YYY)");
+				System.out.println("Data de volta (DD/MM/YYY)");
 				booking.setDataVolta(scanner.nextLine());
 				System.out.println("Tipo de pagamento: ");
 				booking.setTipoPagamento(scanner.nextLine());

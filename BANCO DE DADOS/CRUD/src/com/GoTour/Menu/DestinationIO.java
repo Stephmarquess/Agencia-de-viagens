@@ -30,6 +30,7 @@ public class DestinationIO {
 				System.out.println("--------------------------------------------");
 				System.out.println("Destinos: CADASTRAR DESTINO");
 				System.out.println("-------------------------------------------- \n");
+				
 				System.out.println("Nome do destino");
 				destination.setNomeDestino(scanner.nextLine());
 				System.out.println("Descricao do destino: ");
@@ -48,13 +49,15 @@ public class DestinationIO {
 				System.out.println("--------------------------------------------");
 				System.out.println("Destino: ATUALIZAR DESTINO");
 				System.out.println("-------------------------------------------- \n");
+				
 				Destination updateDestination = new Destination();
-				scanner.nextLine();
-				System.out.println("Digite o ID do Destino que deseja atualizar: ");
+				
+				System.out.println("Digite o ID do Destino que deseja ATUALIZAR: ");
 				updateDestination.setIdDestino(scanner.nextInt());
+				scanner.nextLine();
 				System.out.println("Nome do destino: ");
 				updateDestination.setNomeDestino(scanner.nextLine());
-				scanner.nextLine();
+				
 				System.out.println("Descrição destino: ");
 				updateDestination.setDescricaoDestino(scanner.nextLine());
 
