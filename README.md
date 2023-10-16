@@ -1,7 +1,6 @@
-# RECODE-PRO 2023
+# <img src="https://ead.recode.org.br/pluginfile.php/1/theme_eguru/logo/1685129697/C%C3%B3pia%20de%20recodePRO-%20versao%20positiva%20%281%29.png" height="100px" width="300px"/> 
 
 <h3>REPOSITÓRIO PARA ENTREGAS DO CURSO RECODE PRO 2023, TURMA MANHÃ.</h3>
-
 
 <strong>1ª ENTREGA - 05 de agosto de 2023 </strong>
 
