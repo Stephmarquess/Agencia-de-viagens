@@ -29,6 +29,7 @@ public class DestinationDAO {
 			
 			stmt.executeUpdate();
 			
+			System.out.println("");
 			System.out.println("Destino cadastrado com sucesso!");
 			
 		} catch (SQLException e) {
@@ -55,8 +56,9 @@ public class DestinationDAO {
 					
 					System.out.println("--------------------------------------------");
 					
-					System.out.printf("\n Nome do Destino: %s\n Descrição: %s\n ID: " +
-					destination.getIdDestino(), destination.getNomeDestino(), destination.getDescricaoDestino());
+					System.out.println("\n Nome do Destino: " + destination.getNomeDestino() +
+							"\n Descrição:" +  destination.getDescricaoDestino() + "\n ID: " +
+					destination.getIdDestino());
 					System.out.println(" ");
 				}
 				
@@ -72,22 +74,23 @@ public class DestinationDAO {
 		// UPDATE
 		
 		public void updateDestination(Destination destination) {
-			sql = "UPDATE Destino SET nomeDestino = ?, descricaoDestino = ? "
+			sql = "UPDATE Destino SET descricaoDestino = ?, nomeDestino = ? "
 					+ "WHERE idDestino = ?";
 			try (PreparedStatement stmt = connection.prepareStatement(sql)) {				
 												
-				stmt.setString(1, destination.getDescricaoDestino());
-				stmt.setString(2, destination.getNomeDestino());				
+				stmt.setString(1,destination.getDescricaoDestino());
+				stmt.setString(2,destination.getNomeDestino());				
 				stmt.setInt(3, destination.getIdDestino());
 				
 				
 				stmt.executeUpdate();
 				
-				System.out.print("Destino alterado com sucesso! \n");
+				System.out.print("");
+				System.out.print("\n Destino alterado com sucesso! \n");
 				
 				System.out.println(" \n Nome do Destino: "
 						+ destination.getNomeDestino() + "\n Descrição do destino: " + destination.getDescricaoDestino() + 
-						" \n Id destino: " + destination.getIdDestino());
+						" \n ID: " + destination.getIdDestino());
 					
 				
 			} catch (SQLException e) {

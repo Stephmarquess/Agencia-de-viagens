@@ -1,7 +1,5 @@
 package com.Gotour.model;
 
-//import java.util.Date;
-
 public class Booking {
 
 	private int idReserva;	
@@ -101,13 +99,6 @@ public class Booking {
 		this.tipoPagamento = tipoPagamento;
 	}
 
-
-	@Override
-	public String toString() {
-		return "Booking [idReserva=" + idReserva + ", descricaoReserva=" + descricaoReserva + ", valor=" + valor
-				+ ", dataIda=" + dataIda + ", dataVolta=" + dataIda + ", client=" + Client + ", tipoPagamento="
-				+ tipoPagamento + "]";
-	}
 	
 	
 	

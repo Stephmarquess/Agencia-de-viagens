@@ -37,7 +37,7 @@ public class BookingDAO {
 			stmt.setInt(7, booking.getDestination().getIdDestino());
 
 			stmt.executeUpdate();
-			System.out.println("Reserva registrada com sucesso!" + booking.toString());
+			System.out.println("\n Reserva registrada com sucesso!");
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
@@ -78,11 +78,11 @@ public class BookingDAO {
 				destination.setDescricaoDestino(r.getString("descricaoDestino"));
 
 				
-				System.out.println(" ID Reserva: " + booking.getIdReserva() + "\n Descrição: "
+				System.out.println("\n Descrição: "
 						+ booking.getDescricaoReserva() + " \n Data Ida: " + booking.getDataIda()
 						+ " \n Data de Volta: " + booking.getDataVolta() + "\n Tipo de pagamento: "
 						+ booking.getTipoPagamento() + " \n Id do Cliente: " + client.getIdCliente() + " \n ID Destino: "
-						+ destination.getIdDestino());
+						+ destination.getIdDestino() + "\n ID Reserva: " + booking.getIdReserva());
 				System.out.println("----------------------------- \n");
 			}
 
@@ -111,7 +111,7 @@ public class BookingDAO {
 
 			stmt.executeUpdate();
 
-			System.out.println("Reserva atualizada com sucesso! \n");
+			System.out.println("\n Reserva atualizada com sucesso! \n");
 			System.out.println(" Descrição da reserva: "
 					+ booking.getDescricaoReserva() + "\n Valor: " + booking.getValor() + "\n Data de ida: "
 					+ booking.getDataIda() + "\n Data de ida: " + booking.getDataVolta() + "\n Tipo de pagamento: "
@@ -133,7 +133,7 @@ public class BookingDAO {
 
 			stmt.executeUpdate();
 
-			System.out.println("Reserva deletada com sucesso!");
+			System.out.println("\n Reserva deletada com sucesso!");
 		} catch (SQLException e) {
 			System.out.println("Não foi possível deletar a reserva especificada");
 			System.out.println(e.getMessage());

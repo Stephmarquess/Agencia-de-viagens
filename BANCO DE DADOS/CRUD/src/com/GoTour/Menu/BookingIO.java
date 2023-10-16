@@ -41,9 +41,9 @@ public class BookingIO {
 				System.out.println("Valor: ");
 				booking.setValor(scanner.nextDouble());
 				scanner.nextLine();
-				System.out.println("Data de ida (DD/MM/YYY)");
+				System.out.println("Data de IDA (formato yyy-MM-dd):");
 				booking.setDataIda(scanner.nextLine());
-				System.out.println("Data de volta (DD/MM/YYY)");
+				System.out.println("Data de VOLTA (formato yyy-MM-dd):");
 				booking.setDataVolta(scanner.nextLine());
 				System.out.println("Tipo de pagamento: ");
 				booking.setTipoPagamento(scanner.nextLine());
@@ -81,10 +81,10 @@ public class BookingIO {
 				updateBooking.setDescricaoReserva(scanner.nextLine());
 				System.out.println("Valor: ");
 				updateBooking.setValor(scanner.nextDouble());
-				System.out.println("Data de IDA");
+				System.out.println("Data de IDA (formato yyy-MM-dd):");
 				scanner.nextLine();
 				updateBooking.setDataIda(scanner.nextLine());
-				System.out.println("Data de VOLTA");
+				System.out.println("Data de VOLTA (formato yyy-MM-dd):");
 				updateBooking.setDataVolta(scanner.nextLine());
 				System.out.println("Tipo de pagamento: ");
 				updateBooking.setTipoPagamento(scanner.nextLine());
