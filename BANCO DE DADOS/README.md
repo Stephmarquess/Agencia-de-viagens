@@ -21,6 +21,8 @@ Modelo Conceitual (relacionamentos e cardinalidades), Modelo Lógico, Modelo Fí
 
 <strong> MODELO FÍSICO - SQL </strong> 
 
+CREATE DATABASE agenciaGoTour;
+
 <p> CREATE TABLE Cliente (
 <br> idCliente INTEGER PRIMARY KEY AUTO_INCREMENT,
 <br>nomeCliente VARCHAR(255) NOT NULL,
