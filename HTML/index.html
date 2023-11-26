@@ -50,28 +50,28 @@
 
     <section id="inicio">
 
-      <h2>Onde você quer se aventurar?</h2>
+      <h2 class="mt-5">Onde você quer se aventurar?</h2>
       <div class="passagem">
-        <input type="text" name="local" id="local" placeholder="Destino"><br>
+        <input class="form-control mt-3" type="text" name="local" id="local" placeholder="Pesquise um destino"><br>
         <form>
           <div class="form-align">
             <label> Data de Ida </label>
-            <input type="date" name="dataIda" id="dataIda">
+            <input class="input-control" type="date" name="dataIda" id="dataIda">
           </div>
 
           <div class="form-align">
             <label> Data de Volta </label>
-            <input type="date" name="dataVolta" id="dataVolta"><br>
+            <input class="input-control" type="date" name="dataVolta" id="dataVolta"><br>
           </div>
         </form>
-        <button type="submit">Buscar</button>
+        <button class="btn btn-primary mt-5 mb-5" type="submit">Buscar</button>
       </div>
 
     </section>
 
 
     <section id="destinos">
-      <div class="row">
+      <div class="row mt-5">
         <div class="col-lg-6 col-sm-12" id="nacional">
           <h3 class="titulo-secao">Destinos Nacionais</h3>
           <a href="./destinos.html"><button type="button" class="btn btn-warning">Conferir</button></a>
@@ -86,15 +86,14 @@
 
     <section id="newsletter">
       <div class="row">
-        <div class="col-lg-12 col-sm-12">
+        <div class="col-lg-12 col-sm-12 d-flex flex-column justify-content-center">
           <img src="./IMAGENS/e-mail.png" alt="">
           <h3>Newsletter</h3>
           <p> Receba as novidades e promoções de viagem em primeira mão!</p>
-          <form action="form-newsletter">
-            <input type="email" name="email" id="email-newsletter" placeholder="Digite o seu e-mail"><br>
-            <button type="submit">Registrar</button>
+          <form action="form-newsletter" class="d-flex justify-content-center">
+            <input class="form-control w-50" type="email" name="email" id="email-newsletter" placeholder="Digite o seu e-mail"><br>
+            <button class="btn btn-primary ms-3" type="submit">Registrar</button>
           </form>
-
         </div>
 
       </div>
